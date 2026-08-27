@@ -1,0 +1,249 @@
+---
+const businessName = "Longmont Benchworks";
+const businessDescription = "Expert electronic repair for guitars, tube amplifiers, and pro audio gear.";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{businessName}</title>
+		<style>
+			body {
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f3f4f6;
+				color: #1f2937;
+				line-height: 1.5;
+			}
+			header {
+				background-color: #1f2937;
+				padding: 1.5rem;
+				text-align: center;
+				color: white;
+			}
+			h1 { margin: 0; font-size: 2rem; letter-spacing: -0.05em; }
+			main {
+				max-width: 800px;
+				margin: 2rem auto;
+				padding: 0 1rem;
+			}
+			/* New Full Bleed Image Background Hero */
+			.hero {
+				position: relative;
+				text-align: center;
+				padding: 6rem 1rem;
+				/* Links directly to the image inside public/ */
+				background-image: url('/hero-bg.png');
+				background-size: cover;
+				background-position: center;
+				color: white;
+				border-radius: 0.5rem;
+				margin-bottom: 2rem;
+				box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+				overflow: hidden;
+			}
+			/* Dark semi-transparent tint overlay to keep text highly legible */
+			.hero::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(17, 24, 39, 0.75); 
+				z-index: 1;
+			}
+			/* Ensures the text stays structural and above the dark overlay tint */
+			.hero-content {
+				position: relative;
+				z-index: 2;
+			}
+			.hero h2 { margin-top: 0; font-size: 2.25rem; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+			.card {
+				background: white;
+				padding: 2.5rem;
+				border-radius: 0.5rem;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+				margin-bottom: 2rem;
+			}
+			h3 {
+				margin-top: 0;
+				font-size: 1.5rem;
+				border-bottom: 2px solid #e5e7eb;
+				padding-bottom: 0.5rem;
+				color: #111827;
+			}
+			.services-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.services-list li {
+				display: flex;
+				justify-content: space-between;
+				padding: 0.75rem 0;
+				border-bottom: 1px solid #f3f4f6;
+			}
+			.services-list li:last-child {
+				border-bottom: none;
+			}
+			.service-name {
+				font-weight: 500;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			.service-price {
+				font-weight: 700;
+				color: #2563eb;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 1.2rem;
+			}
+			.form-group {
+				display: flex;
+				flex-direction: column;
+				gap: 0.4rem;
+			}
+			label {
+				font-weight: 600;
+				color: #374151;
+				font-size: 0.95rem;
+			}
+			input, textarea, select {
+				padding: 0.75rem;
+				border: 1px solid #d1d5db;
+				border-radius: 0.375rem;
+				font-size: 1rem;
+				background-color: #fff;
+			}
+			input:focus, textarea:focus, select:focus {
+				outline: 2px solid #2563eb;
+				border-color: transparent;
+			}
+			button {
+				background-color: #2563eb;
+				color: white;
+				padding: 0.75rem 1.5rem;
+				border: none;
+				border-radius: 0.375rem;
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: background-color 0.2s;
+			}
+			button:hover {
+				background-color: #1d4ed8;
+			}
+			footer {
+				text-align: center;
+				padding: 3rem 2rem;
+				color: #6b7280;
+				font-size: 0.875rem;
+			}
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<h1>{businessName}</h1>
+		</header>
+
+		<main>
+			<!-- Hero Section with Background Layout wrapper -->
+			<section class="hero">
+				<div class="hero-content">
+					<h2>About Our Shop</h2>
+					<p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; font-weight: 300;">{businessDescription}</p>
+				</div>
+			</section>
+
+			<!-- Services Rate Card Section -->
+			<section class="card">
+				<h3>Our Services & Pricing</h3>
+				<ul class="services-list">
+					<li>
+						<span class="service-name">🎸 Full Guitar Rewire <span style="font-size: 0.85rem; color:#6b7280;">(3 Pots, Switch, Jack)</span></span>
+						<span class="service-price">$80</span>
+					</li>
+					<li>
+						<span class="service-name">🎸 Acoustic Pickup System Installation</span>
+						<span class="service-price">$75</span>
+					</li>
+					<li>
+						<span class="service-name">🎸 Pickup Installation <span style="font-size: 0.85rem; color:#6b7280;">(Set of Two)</span></span>
+						<span class="service-price">$70</span>
+					</li>
+					<li>
+						<span class="service-name">🎸 Pickup Installation <span style="font-size: 0.85rem; color:#6b7280;">(Standard Single)</span></span>
+						<span class="service-price">$40</span>
+					</li>
+					<li>
+						<span class="service-name">🎸 Single Pot or Switch Replacement</span>
+						<span class="service-price">$35</span>
+					</li>
+					<li>
+						<span class="service-name">🎸 Output Jack Replacement</span>
+						<span class="service-price">$25</span>
+					</li>
+					<li>
+						<span class="service-name">🔊 Amplifier Repairs & Electronics Service</span>
+						<span class="service-price">Hourly Rate</span>
+					</li>
+					<li>
+						<span class="service-name">🛠️ Diagnostic Deposit <span style="font-size: 0.85rem; color:#6b7280;">(Applied toward repair)</span></span>
+						<span class="service-price">$40</span>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Client Intake / Quote Request Form -->
+			<section class="card">
+				<h3>Book a Repair / Request a Quote</h3>
+				<p>Submit your gear details below to initiate an intake ticket.</p>
+				
+				<form name="intake" method="POST" data-netlify="true">
+					
+					<div class="form-group">
+						<label for="name">Customer Name</label>
+						<input type="text" id="name" name="name" placeholder="First and Last Name" required />
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="email" id="email" name="email" placeholder="name@example.com" required />
+					</div>
+
+					<div class="form-group">
+						<label for="gear-type">Equipment Classification</label>
+						<select id="gear-type" name="gear-type" required>
+							<option value="">-- Select Gear Type --</option>
+							<option value="guitar-electronics">Guitar / Bass Electronics</option>
+							<option value="tube-amp">Tube Amplifier</option>
+							<option value="pro-audio">Pro Audio Gear / Outboard</option>
+							<option value="other">Other Electronic Request</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="issue-description">Gear Model & Symptom Description</label>
+						<textarea id="issue-description" name="issue-description" rows="5" placeholder="Please list the brand, model, and details of the failure or modification you want done..." required></textarea>
+					</div>
+
+					<button type="submit">Submit Intake Form</button>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; {new Date().getFullYear()} {businessName}. All rights reserved.</p>
+		</footer>
+
+	</body>
+</html>
